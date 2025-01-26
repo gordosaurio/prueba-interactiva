@@ -1,0 +1,31 @@
+/* Reiniciar los estilos predeterminados del navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Asegura que ocupen el 100% del viewport */
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 100% del alto del viewport */
+  width: 100vw;  /* 100% del ancho del viewport */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.background-image {
+  height: 100%; /* Ocupa todo el contenedor */
+  width: 100%;  /* Ocupa todo el contenedor */
+  background-image: url('https://api.test.interactiva.net.co/media/header.png');
+  background-size: cover; /* Asegura que la imagen cubra todo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita repeticiones */
+}
