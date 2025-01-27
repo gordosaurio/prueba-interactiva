@@ -12,7 +12,7 @@ function App() {
         }
         return response.json();
       })
-      .then((data) => console.log(data))
+      .then((data) => setCategories(data))
       .catch((error) => console.error('Error fetching categories:', error));
   }, []);
   

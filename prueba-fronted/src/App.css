@@ -42,8 +42,8 @@ html, body {
 .card {
   background-size: cover;
   background-position: center;
-  width: 200px;
-  height: 300px;
+  width: 30vw;
+  height: 20vh;
   color: white;
   display: flex;
   justify-content: center;
