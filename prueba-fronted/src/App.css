@@ -57,15 +57,17 @@ html, body {
   height: 90%;
   color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 
 .card-text {
-  font-size: 18px;
+  margin-bottom: 5%;
+  margin-right: 5%;
+  font-size: 0.7rem;
   font-weight: bold;
 }
