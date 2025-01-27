@@ -5,6 +5,7 @@ function App() {
   const [categories, setCategories] = useState([]);
   const [companies, setCompanies] = useState([]);
   const [travels, setTravels] = useState([]);
+  const [experience, setExperience] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -44,13 +45,26 @@ function App() {
         })
         .then((data) => setTravels(data))
         .catch((error) => console.error('Error fetching travels:', error));
+
+        fetch('/api/get-customer_experiences/')
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);  // Verifica los datos que recibes
+          setExperience(data);  // Asigna correctamente
+        })
+        .catch((error) => console.error('Error fetching travels:', error));
   }, []);
   
   const handleNext = () => {
     if (currentIndex < companies[0].feed_instagram.length - 3) {
       setCurrentIndex(currentIndex + 1);
     } else {
-      setCurrentIndex(0); // Cuando llegue al final, vuelve al primer índice
+      setCurrentIndex(0);
     }
   };
 
@@ -200,7 +214,22 @@ function App() {
       </section>
 
 
-
+      <section className='experience-section'>
+        <h1>{experience[0].title}</h1>
+        <div className='experience-data'>
+          <div className='experience-data-left'>
+            <img
+              src={`https://api.test.interactiva.net.co${experience[0].image}`}
+              alt={experience[0].title}
+              className="experience-image"
+            />
+          </div>
+          <div className='experience-data-right'>
+            <h1>{experience[0].description}</h1>
+            <p>{experience[0].diference_description}</p>
+          </div>
+        </div>
+      </section>
 
 
     </>
