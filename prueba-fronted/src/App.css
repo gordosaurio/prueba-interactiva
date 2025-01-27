@@ -1,4 +1,3 @@
-/* Reiniciar los estilos predeterminados del navegador */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +5,7 @@
 }
 
 html, body {
-  height: 100%; /* Asegura que ocupen el 100% del viewport */
+  height: 100%;
   margin: 0;
 }
 
@@ -276,7 +275,7 @@ html, body {
     overflow: hidden;
     transition: transform 0.3s ease;
     width: 90%;
-    height: 75vh;
+    height: 90vh;
   }
   
   .travel-card:hover {
@@ -292,15 +291,14 @@ html, body {
   .travel-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
-    background-color: red;
+    height: 100%;
     
     h1 {
       margin-right: 8%;
       margin-left: 8%;
-      margin-top: 7%;
       font-size: 0.9rem;
       margin-bottom: 2%;
       color: black;
