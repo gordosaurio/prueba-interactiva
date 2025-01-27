@@ -10,7 +10,7 @@ html, body {
   margin: 0;
 }
 
-.app-container {
+.header-container {
   display: flex;
   justify-content: center;
   align-items: flex-end; /* Centra las tarjetas en la parte inferior */
@@ -25,6 +25,9 @@ html, body {
 .background-image {
   height: 100%; /* Ocupa todo el contenedor */
   width: 100%;  /* Ocupa todo el contenedor */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center;
   background-image: url('https://api.test.interactiva.net.co/media/header.png');
   background-size: cover; /* Asegura que la imagen cubra todo */
   background-position: center; /* Centra la imagen */
@@ -63,6 +66,22 @@ html, body {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+}
+
+.text-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    color: white;
+  }
+  
+  h2 {
+    color: #c78f3a;
+  }
 }
 
 .card-text {

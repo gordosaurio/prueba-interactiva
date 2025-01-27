@@ -20,24 +20,31 @@ function App() {
 
 
   return (
-    <div className="app-container">
-      <div className="background-image"></div>
-      <div className="cards-container">
-        {categories.map((category) => (
-          <div
-            key={category.id}
-            className="card-border"
-          >
-            <div className="card"
-              style={{
-                backgroundImage: `url(https://api.test.interactiva.net.co${category.image_banner})`,
-              }}
-            >
-              <div className="card-text">{category.name}</div>
-            </div>
-          </div>
-        ))}
+    <div className="header-container">
+      <div className="background-image">
+        <div className='text-header'>
+          <h1>
+            THE TRAVEL
+          </h1>
+          <h2> EXPERIENCE</h2>
+        </div>
       </div>
+        <div className="cards-container">
+          {categories.map((category) => (
+            <div
+              key={category.id}
+              className="card-border"
+            >
+              <div className="card"
+                style={{
+                  backgroundImage: `url(https://api.test.interactiva.net.co${category.image_banner})`,
+                }}
+              >
+                <div className="card-text">{category.name}</div>
+              </div>
+            </div>
+          ))}
+        </div>
     </div>
   )
 }
