@@ -13,12 +13,13 @@ html, body {
 .app-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh; /* 100% del alto del viewport */
-  width: 100vw;  /* 100% del ancho del viewport */
+  align-items: flex-end; /* Centra las tarjetas en la parte inferior */
+  height: 100vh;
+  width: 100vw;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  position: relative;
 }
 
 .background-image {
@@ -28,4 +29,33 @@ html, body {
   background-size: cover; /* Asegura que la imagen cubra todo */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita repeticiones */
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  gap: 20px; /* Espaciado entre tarjetas */
+  position: absolute;
+  bottom: 20px; /* Ubica las tarjetas en la parte inferior */
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 300px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.card-text {
+  font-size: 18px;
+  font-weight: bold;
 }
