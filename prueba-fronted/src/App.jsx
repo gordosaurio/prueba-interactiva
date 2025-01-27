@@ -170,10 +170,12 @@ function App() {
                 alt={travel.title}
                 className="travel-image"
               />
+              <div className="status-line">
+                {travel.status.title}
+              </div>
               <div className="travel-info">
                 <h2>{travel.title}</h2>
                 <p className="travel-category">{travel.category.name}</p>
-                <button className="travel-button">Ver más</button>
               </div>
             </div>
           ))}
