@@ -161,7 +161,7 @@ function App() {
 
 
       <section className="travels-section">
-        <h1>Explora Nuestros Viajes</h1>
+        <h1>EXPERIENCIAS GRUPALES</h1>
         <div className="travels-container">
           {travels.map((travel) => (
             <div key={travel.id} className="travel-card">
