@@ -42,13 +42,6 @@ function App() {
       setCurrentIndex(0); // Cuando llegue al final, vuelve al primer índice
     }
   };
-  
-
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
 
   return (
     <>
@@ -104,14 +97,6 @@ function App() {
         )}
 
         <div className="instagram-carousel">
-          <button
-            className="carousel-button left"
-            onClick={handlePrev}
-            disabled={currentIndex === 0}
-          >
-            &lt;
-          </button>
-
           <div
             className="carousel-track"
             style={{ transform: `translateX(-${currentIndex * 220}px)` }}

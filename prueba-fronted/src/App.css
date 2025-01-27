@@ -202,10 +202,6 @@ html, body {
   z-index: 10;
 }
 
-.carousel-button.left {
-  left: 10px; /* Ajusta el botón izquierdo al borde interno */
-}
-
 .carousel-button.right {
   right: 10px; /* Ajusta el botón derecho al borde interno */
 }
