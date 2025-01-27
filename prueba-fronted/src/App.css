@@ -160,20 +160,27 @@ html, body {
   }
 }
 
+
 .instagram-carousel {
   display: flex;
-  gap: 20px;
-  justify-content: center;
-  padding: 20px 0;
-  overflow-x: auto;  /* Permite desplazamiento horizontal */
+  overflow: hidden; /* Oculta las imágenes que no están visibles */
+  width: 600px; /* Ajusta el ancho según lo necesites */
+  margin: 0 auto; /* Centra el carrusel */
+  position: relative; /* Para posicionar los botones */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease; /* Animación al mover el carrusel */
 }
 
 .carousel-item {
   flex-shrink: 0;
-  width: 200px;
+  width: 200px; /* Ajusta el ancho de las imágenes */
   height: 200px;
   border-radius: 10px;
   overflow: hidden;
+  margin-right: 20px; /* Espaciado entre imágenes */
 }
 
 .carousel-image {
@@ -181,4 +188,29 @@ html, body {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-button.left {
+  left: -40px; /* Posición del botón izquierdo */
+}
+
+.carousel-button.right {
+  right: -40px; /* Posición del botón derecho */
+}
+
+.carousel-button:disabled {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: not-allowed;
 }

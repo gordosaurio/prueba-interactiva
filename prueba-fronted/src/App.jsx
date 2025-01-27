@@ -4,6 +4,7 @@ import './App.css'
 function App() {
   const [categories, setCategories] = useState([]);
   const [companies, setCompanies] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     fetch('/api/get-categories/') // El prefijo '/api' activa el proxy en Vite
@@ -34,8 +35,17 @@ function App() {
       .catch((error) => console.error('Error fetching categories:', error));
   }, []);
   
-  
+  const handleNext = () => {
+    if (currentIndex < companies[0].feed_instagram.length - 3) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
 
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
 
   return (
     <>
@@ -91,19 +101,36 @@ function App() {
         )}
 
         <div className="instagram-carousel">
-          {companies[0] && companies[0].feed_instagram && companies[0].feed_instagram.length > 0 && (
-            <div className="carousel">
-              {companies[0].feed_instagram.map((image) => (
-                <div key={image.id} className="carousel-item">
-                  <img
-                    src={`https://api.test.interactiva.net.co${image.image}`}
-                    alt={`Feed Instagram ${image.id}`}
-                    className="carousel-image"
-                  />
-                </div>
-              ))}
-            </div>
-          )}
+          <button
+            className="carousel-button left"
+            onClick={handlePrev}
+            disabled={currentIndex === 0}
+          >
+            &lt;
+          </button>
+
+          <div
+            className="carousel-track"
+            style={{ transform: `translateX(-${currentIndex * 220}px)` }}
+          >
+            {companies[0]?.feed_instagram?.map((image, index) => (
+              <div key={image.id} className="carousel-item">
+                <img
+                  src={`https://api.test.interactiva.net.co${image.image}`}
+                  alt={`Feed Instagram ${image.id}`}
+                  className="carousel-image"
+                />
+              </div>
+            ))}
+          </div>
+
+          <button
+            className="carousel-button right"
+            onClick={handleNext}
+            disabled={currentIndex >= companies[0]?.feed_instagram?.length - 3}
+          >
+            &gt;
+          </button>
         </div>
       </section>
 
