@@ -22,6 +22,47 @@ html, body {
   position: relative;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.logo {
+  width: 150px;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  
+  li {
+    margin-right: 20px;
+  }
+
+  button {
+    background: none;
+    border: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  button:hover {
+    color: #c78f3a;
+  }
+
+}
+
+
 .background-image {
   height: 100%; /* Ocupa todo el contenedor */
   width: 100%;  /* Ocupa todo el contenedor */

@@ -21,6 +21,26 @@ function App() {
 
   return (
     <div className="header-container">
+      
+      
+      <header className="header">
+        <img
+          src="https://api.test.interactiva.net.co/media/logo.png"
+          alt="Logo"
+          className="logo"
+        />
+        <nav>
+          <ul className="nav-list">
+            <li><button>Inicio</button></li>
+            <li><button>Nosotros</button></li>
+            <li><button>Viajes</button></li>
+            <li><button>Blogs</button></li>
+            <li><button>Contacto</button></li>
+          </ul>
+        </nav>
+      </header>
+
+
       <div className="background-image">
         <div className='text-header'>
           <h1>
