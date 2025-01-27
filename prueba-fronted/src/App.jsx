@@ -26,12 +26,15 @@ function App() {
         {categories.map((category) => (
           <div
             key={category.id}
-            className="card"
-            style={{
-              backgroundImage: `url(https://api.test.interactiva.net.co${category.image_banner})`,
-            }}
+            className="card-border"
           >
-            <div className="card-text">{category.name}</div>
+            <div className="card"
+              style={{
+                backgroundImage: `url(https://api.test.interactiva.net.co${category.image_banner})`,
+              }}
+            >
+              <div className="card-text">{category.name}</div>
+            </div>
           </div>
         ))}
       </div>

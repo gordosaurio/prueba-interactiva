@@ -39,18 +39,28 @@ html, body {
   bottom: 20px; /* Ubica las tarjetas en la parte inferior */
 }
 
+.card-border {
+  width: 25vw;
+  height: 22vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10%;
+}
+
 .card {
   background-size: cover;
   background-position: center;
-  width: 30vw;
-  height: 20vh;
+  width: 94%;
+  height: 90%;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   border-radius: 10px;
-  padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
