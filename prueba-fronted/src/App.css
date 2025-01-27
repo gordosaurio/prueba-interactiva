@@ -261,9 +261,10 @@ html, body {
   }
   
   .travels-container {
+    margin-left: 4%;
+    margin-right: 4%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1%;
     justify-items: center;
     align-items: center;
   }
@@ -274,8 +275,8 @@ html, body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
-    width: 100%;
-    max-width: 300px;
+    width: 90%;
+    height: 75vh;
   }
   
   .travel-card:hover {
