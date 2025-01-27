@@ -175,12 +175,19 @@ function App() {
               </div>
               <div className="travel-info">
                 <h1>{travel.title}</h1>
+                
+
                 <h2>
-                  {new Date(travel.date_start).toLocaleDateString('es-CO', { day: '2-digit', month: '2-digit' })} - 
-                  {new Date(travel.date_end).toLocaleDateString('es-CO', { day: '2-digit', month: '2-digit' })} | 
-                  DESDE 
-                  {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(travel.cost)}
+                  {new Date(travel.date_start).getMonth() === new Date(travel.date_end).getMonth() &&
+                  new Date(travel.date_start).getFullYear() === new Date(travel.date_end).getFullYear()
+                    ? `${new Date(travel.date_start).toLocaleDateString('es-CO', { day: '2-digit' })} - ${new Date(travel.date_end).toLocaleDateString('es-CO', { day: '2-digit' })} de ${new Date(travel.date_start).toLocaleDateString('es-CO', { month: 'long' })} | DESDE 
+                      ${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(travel.cost)}`
+                    : `${new Date(travel.date_start).toLocaleDateString('es-CO', { day: '2-digit', month: '2-digit' })} - 
+                      ${new Date(travel.date_end).toLocaleDateString('es-CO', { day: '2-digit', month: '2-digit' })} | 
+                      DESDE ${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(travel.cost)}`}
                 </h2>
+
+
                 <p className="travel-category">{travel.description}</p>
               </div>
             </div>
