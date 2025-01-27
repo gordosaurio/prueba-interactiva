@@ -36,7 +36,7 @@ function App() {
   }, []);
   
   const handleNext = () => {
-    if (currentIndex < companies[0].feed_instagram.length - 2) {
+    if (currentIndex < companies[0].feed_instagram.length - 3) {
       setCurrentIndex(currentIndex + 1);
     } else {
       setCurrentIndex(0); // Cuando llegue al final, vuelve al primer índice
@@ -105,7 +105,7 @@ function App() {
         <div className="carousel-container">
           <div className="carousel-left">
             <img
-              src="/assets/instagram-logo.png" // Ruta de la imagen en la carpeta de assets
+              src="/src/assets/instagram-logo.png" // Ruta de la imagen en la carpeta de assets
               alt="Instagram Logo"
               className="carousel-logo"
             />
