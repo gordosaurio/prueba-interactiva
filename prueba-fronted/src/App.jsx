@@ -43,6 +43,10 @@ function App() {
     }
   };
 
+  const openInstagram = () => {
+    window.open("https://www.instagram.com/churroceballos/", "_blank");
+  };
+
   return (
     <>
       <div className="header-container">
@@ -108,6 +112,7 @@ function App() {
               src="/src/assets/instagram-logo.png" // Ruta de la imagen en la carpeta de assets
               alt="Instagram Logo"
               className="carousel-logo"
+              onClick={openInstagram}
             />
           </div>
 
