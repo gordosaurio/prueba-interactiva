@@ -140,6 +140,16 @@ function App() {
             </button>
           </div>
         </div>
+
+        <div className="carousel-container">
+          <div className="instagram-carousel">
+            {companies[0] && companies[0].instagram_account && (
+              <div className="instagram-account-container">
+                  {companies[0].instagram_account}
+              </div>
+            )}
+          </div>
+        </div>
       </section>
 
 

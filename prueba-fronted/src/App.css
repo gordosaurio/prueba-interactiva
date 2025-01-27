@@ -230,3 +230,15 @@ html, body {
 .carousel-button.right {
   right: 5%; /* Ajusta el botón derecho al borde interno */
 }
+
+  .instagram-account-container {
+    margin-top: 1%;
+    margin-bottom: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    margin-left: 3%;
+    color: #c78f3a;
+    font-size: 1rem;
+  }
