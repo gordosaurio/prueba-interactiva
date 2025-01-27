@@ -275,11 +275,25 @@ html, body {
     overflow: hidden;
     transition: transform 0.3s ease;
     width: 90%;
-    height: 90vh;
+    height:80vh;
+    display: flex;
+    flex-direction: column;
   }
   
   .travel-card:hover {
     transform: translateY(-5px);
+  }
+
+  .travel-card-footer {
+    background-color: #c78f3a; /* Color de fondo */
+    color: white;
+    width: 100%;
+    height: 18vh; /* Altura del pie de página */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    font-size: 1rem;
+    font-weight: bold;
   }
   
   .travel-image {

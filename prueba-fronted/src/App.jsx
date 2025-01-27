@@ -190,6 +190,10 @@ function App() {
 
                 <p className="travel-category">{travel.description}</p>
               </div>
+
+              <div className="travel-card-footer">
+                Más Información
+              </div>
             </div>
           ))}
         </div>
