@@ -90,36 +90,58 @@ function App() {
           </div>
       </div>
 
+      
+      
+
+
+
+
       <section className="about-us-section">
         <h1>Nosotros</h1>
         {companies[0] && companies[0].description && (
           <p className="companies-description">{companies[0].description}</p>
         )}
 
-        <div className="instagram-carousel">
-          <div
-            className="carousel-track"
-            style={{ transform: `translateX(-${currentIndex * 220}px)` }}
-          >
-            {companies[0]?.feed_instagram?.map((image, index) => (
-              <div key={image.id} className="carousel-item">
-                <img
-                  src={`https://api.test.interactiva.net.co${image.image}`}
-                  alt={`Feed Instagram ${image.id}`}
-                  className="carousel-image"
-                />
-              </div>
-            ))}
+        <div className="carousel-container">
+          <div className="carousel-left">
+            <img
+              src="/assets/instagram-logo.png" // Ruta de la imagen en la carpeta de assets
+              alt="Instagram Logo"
+              className="carousel-logo"
+            />
           </div>
 
-          <button
-            className="carousel-button right"
-            onClick={handleNext}
-          >
-            &gt;
-          </button>
+          <div className="instagram-carousel">
+            <div
+              className="carousel-track"
+              style={{ transform: `translateX(-${currentIndex * 220}px)` }}
+            >
+              {companies[0]?.feed_instagram?.map((image, index) => (
+                <div key={image.id} className="carousel-item">
+                  <img
+                    src={`https://api.test.interactiva.net.co${image.image}`}
+                    alt={`Feed Instagram ${image.id}`}
+                    className="carousel-image"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <button
+              className="carousel-button right"
+              onClick={handleNext}
+            >
+              &gt;
+            </button>
+          </div>
         </div>
       </section>
+
+
+
+
+
+
 
     </>
   )

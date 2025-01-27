@@ -161,10 +161,36 @@ html, body {
 }
 
 
+
+
+
+
+.carousel-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Columna para la imagen */
+.carousel-left {
+  width: 20%; /* 20% de ancho para la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-logo {
+  max-width: 100%; /* Asegura que la imagen no se desborde */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
 .instagram-carousel {
   display: flex;
   overflow: hidden; /* Oculta las imágenes que no están visibles */
-  width: 600px; /* Ajusta el ancho según lo necesites */
+  width: 80%; /* Ajusta el ancho según lo necesites */
   margin: 0 auto; /* Centra el carrusel */
   position: relative; /* Para posicionar los botones */
 }
@@ -180,7 +206,7 @@ html, body {
   height: 200px;
   border-radius: 10px;
   overflow: hidden;
-  margin-right: 20px; /* Espaciado entre imágenes */
+  margin-right: 2%;
 }
 
 .carousel-image {
@@ -203,7 +229,7 @@ html, body {
 }
 
 .carousel-button.right {
-  right: 10px; /* Ajusta el botón derecho al borde interno */
+  right: 5%; /* Ajusta el botón derecho al borde interno */
 }
 
 
