@@ -295,10 +295,11 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-right: 8%;
-    margin-left: 8%;
+    background-color: red;
     
     h1 {
+      margin-right: 8%;
+      margin-left: 8%;
       margin-top: 7%;
       font-size: 0.9rem;
       margin-bottom: 2%;
@@ -306,12 +307,16 @@ html, body {
     }
 
     h2 {
+      margin-right: 8%;
+      margin-left: 8%;
       font-size: 0.7rem;
       margin-bottom: 2%;
       color: #c78f3a;
     }
 
     p {
+      margin-right: 8%;
+      margin-left: 8%;
       font-size: 0.7rem;
       color: black;
     }
