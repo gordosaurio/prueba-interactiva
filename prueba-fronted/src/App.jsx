@@ -170,7 +170,7 @@ function App() {
                 alt={travel.title}
                 className="travel-image"
               />
-              <div className="status-line">
+              <div className="status-line" style={{ backgroundColor: travel.status.color }}>
                 {travel.status.title}
               </div>
               <div className="travel-info">
