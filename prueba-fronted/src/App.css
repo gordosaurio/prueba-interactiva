@@ -203,12 +203,13 @@ html, body {
 }
 
 .carousel-button.left {
-  left: -40px; /* Posición del botón izquierdo */
+  left: 10px; /* Ajusta el botón izquierdo al borde interno */
 }
 
 .carousel-button.right {
-  right: -40px; /* Posición del botón derecho */
+  right: 10px; /* Ajusta el botón derecho al borde interno */
 }
+
 
 .carousel-button:disabled {
   background-color: rgba(0, 0, 0, 0.2);

@@ -38,6 +38,8 @@ function App() {
   const handleNext = () => {
     if (currentIndex < companies[0].feed_instagram.length - 3) {
       setCurrentIndex(currentIndex + 1);
+    } else {
+      setCurrentIndex(0);
     }
   };
 
