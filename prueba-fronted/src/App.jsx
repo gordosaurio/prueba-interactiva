@@ -4,6 +4,7 @@ import './App.css'
 function App() {
   const [categories, setCategories] = useState([]);
   const [companies, setCompanies] = useState([]);
+  const [travels, setTravels] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -33,6 +34,16 @@ function App() {
         }
       })      
       .catch((error) => console.error('Error fetching categories:', error));
+
+      fetch('/api/get-travels/')
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((data) => setTravels(data))
+        .catch((error) => console.error('Error fetching travels:', error));
   }, []);
   
   const handleNext = () => {
@@ -94,12 +105,6 @@ function App() {
           </div>
       </div>
 
-      
-      
-
-
-
-
       <section className="about-us-section">
         <h1>Nosotros</h1>
         {companies[0] && companies[0].description && (
@@ -153,6 +158,27 @@ function App() {
       </section>
 
 
+
+
+      <section className="travels-section">
+        <h1>Explora Nuestros Viajes</h1>
+        <div className="travels-container">
+          {travels.map((travel) => (
+            <div key={travel.id} className="travel-card">
+              <img
+                src={`https://api.test.interactiva.net.co${travel.image_cover}`}
+                alt={travel.title}
+                className="travel-image"
+              />
+              <div className="travel-info">
+                <h2>{travel.title}</h2>
+                <p className="travel-category">{travel.category.name}</p>
+                <button className="travel-button">Ver más</button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
 
 
