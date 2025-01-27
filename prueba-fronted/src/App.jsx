@@ -36,12 +36,13 @@ function App() {
   }, []);
   
   const handleNext = () => {
-    if (currentIndex < companies[0].feed_instagram.length - 3) {
+    if (currentIndex < companies[0].feed_instagram.length - 2) {
       setCurrentIndex(currentIndex + 1);
     } else {
-      setCurrentIndex(0);
+      setCurrentIndex(0); // Cuando llegue al final, vuelve al primer índice
     }
   };
+  
 
   const handlePrev = () => {
     if (currentIndex > 0) {
@@ -129,7 +130,6 @@ function App() {
           <button
             className="carousel-button right"
             onClick={handleNext}
-            disabled={currentIndex >= companies[0]?.feed_instagram?.length - 3}
           >
             &gt;
           </button>
