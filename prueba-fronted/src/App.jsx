@@ -85,15 +85,15 @@ function App() {
       </div>
 
       <section className="about-us-section">
-        <h2>Nosotros</h2>
-        {companies && companies.description && (
-          <p className="companies-description">{companies.description}</p>
+        <h1>Nosotros</h1>
+        {companies[0] && companies[0].description && (
+          <p className="companies-description">{companies[0].description}</p>
         )}
 
         <div className="instagram-carousel">
-          {companies && companies.feed_instagram && companies.feed_instagram.length > 0 && (
+          {companies[0] && companies[0].feed_instagram && companies[0].feed_instagram.length > 0 && (
             <div className="carousel">
-              {companies.feed_instagram.map((image) => (
+              {companies[0].feed_instagram.map((image) => (
                 <div key={image.id} className="carousel-item">
                   <img
                     src={`https://api.test.interactiva.net.co${image.image}`}
@@ -106,6 +106,7 @@ function App() {
           )}
         </div>
       </section>
+
     </>
   )
 }
