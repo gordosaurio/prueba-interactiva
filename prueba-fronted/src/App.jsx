@@ -174,7 +174,13 @@ function App() {
                 {travel.status.title}
               </div>
               <div className="travel-info">
-                <h2>{travel.title}</h2>
+                <h1>{travel.title}</h1>
+                <h2>
+                  {new Date(travel.date_start).toLocaleDateString('es-CO', { day: '2-digit', month: '2-digit' })} - 
+                  {new Date(travel.date_end).toLocaleDateString('es-CO', { day: '2-digit', month: '2-digit' })} | 
+                  DESDE 
+                  {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(travel.cost)}
+                </h2>
                 <p className="travel-category">{travel.description}</p>
               </div>
             </div>

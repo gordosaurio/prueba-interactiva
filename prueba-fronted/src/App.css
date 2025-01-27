@@ -296,9 +296,10 @@ html, body {
     align-items: center;
     text-align: center;
     
-    h2 {
+    h1 {
       font-size: 0.9rem;
       margin-bottom: 2%;
+      color: black;
     }
 
     p {
