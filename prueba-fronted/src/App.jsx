@@ -170,12 +170,12 @@ function App() {
                 alt={travel.title}
                 className="travel-image"
               />
-              <div className="status-line" style={{ backgroundColor: travel.status.color, color: "white" }}>
+              <div className="status-line" style={{ backgroundColor: travel.status.color, color: "white", fontSize: "0.9rem" }}>
                 {travel.status.title}
               </div>
               <div className="travel-info">
                 <h2>{travel.title}</h2>
-                <p className="travel-category">{travel.category.name}</p>
+                <p className="travel-category">{travel.description}</p>
               </div>
             </div>
           ))}

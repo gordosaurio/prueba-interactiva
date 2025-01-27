@@ -64,10 +64,10 @@ html, body {
 
 
 .background-image {
-  height: 100%; /* Ocupa todo el contenedor */
-  width: 100%;  /* Ocupa todo el contenedor */
+  height: 100%;
+  width: 100%;
   display: flex;
-  justify-content: center; /* Centra el contenido horizontalmente */
+  justify-content: center;
   align-items: center;
   background-image: url('https://api.test.interactiva.net.co/media/header.png');
   background-size: cover; /* Asegura que la imagen cubra todo */
@@ -290,13 +290,21 @@ html, body {
   }
   
   .travel-info {
-    padding: 20px;
-    text-align: left;
-  }
-  
-  .travel-info h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    h2 {
+      font-size: 0.9rem;
+      margin-bottom: 2%;
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: black;
+    }
   }
   
   .travel-category {
