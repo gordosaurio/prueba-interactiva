@@ -3,6 +3,7 @@ import './App.css'
 
 function App() {
   const [categories, setCategories] = useState([]);
+  const [companies, setCompanies] = useState([]);
 
   useEffect(() => {
     fetch('/api/get-categories/') // El prefijo '/api' activa el proxy en Vite
@@ -13,6 +14,23 @@ function App() {
         return response.json();
       })
       .then((data) => setCategories(data))
+      .catch((error) => console.error('Error fetching categories:', error));
+
+    fetch('/api/get-companies/') // El prefijo '/api' activa el proxy en Vite
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setCompanies(data);
+          console.log(data);
+        } else {
+          console.error("Datos no válidos:", data);
+        }
+      })      
       .catch((error) => console.error('Error fetching categories:', error));
   }, []);
   
